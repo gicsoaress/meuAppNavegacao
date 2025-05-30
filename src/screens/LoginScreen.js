@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet, Dimensions, TextInput } from 'react-native';
+import { View, Text, Button, StyleSheet, Dimensions, TextInput, Alert } from 'react-native';
 
 const windowWidth = Dimensions.get('window').width;
 
@@ -12,9 +12,9 @@ export default function LoginScreen({ navigation }) {
 
     const autenticacao = () => {
         {email === userEmail && senha === userSenha ? (
-            navigation.naigate('Home')
+            navigation.navigate('Home')
         ) : (
-            alert.alert("Erro na autenticação: email ou senha inválidos")
+            Alert.alert('Erro na autenticação: email ou senha inválidos')
         )}
     }
 
